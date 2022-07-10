@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #2d2d2d;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+.nav-container img {
+    height: 5rem;
+    width: 15rem;
+}
+
+.main-container {
+    display:grid;
+    grid-template-rows: auto 1fr;
+    /*row-gap: 1rem;*/
+}
+.bienvenida {
+    background-image: url("../imgs/pm.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #696969;
+    /* Advance CSS Para background*/
+    background-blend-mode: multiply;
+    padding-top: 6rem;
+    padding-bottom: 10rem;
+    color: #fcfcfc;
+    text-align: center;
+
+    font-family:'Poppings' sans-serif;
+}
+
+.bienvenida p {
+    font-size: 2rem;
+    padding-bottom: 3rem;
+}
+
+.acciones{
+    display: flex;
+    justify-content: space-around;
+}
+
+.botonera {
+    font-size: 1rem;
+    padding: 1rem;
+    width: 10rem;
+    border-radius: 5%;
+    border: 2px solid #fcfcfc;
+    color: #fcfcfc;
+    text-decoration: none;
+}
+
+.botonera:hover {
+    background-color: #ca2c2c;
+    color: #fcfcfc;
+    border: none;
+    transition-duration: 0.3s;
+}
+
+.main-form {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: space-around;
+    
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer {
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 100%;
+    color: #fcfcfc;
+    font-size: 10px;
+}
+
+.footer p {
+    margin: 0%;
+    padding: 0%;
+    /*position: relative;
+    top: 100%*/
+}
+
+/* reservas style */
+
+.nombres {
+    display: flex;
+}
+.input-form {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 2px solid #2d2d2d;
+}
+
+.input-field{
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    column-gap: normal;
+    color: #fcfcfc;
+}
+
+.label{
+    width: 5rem;
+}
+
+#email{
+    width: 20rem;
+}
+#opciones {
+    padding: 0.5rem;
+}
+
+#fecha {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type=checkbox] {
+    margin-left: 1rem;
+    transform: scale(1.5);
+}
+
+.op {
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+#reservar-btn{
+    align-self: center;
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+#reservar-btn:hover {
+    background-color: #cb4c4c;
+}
+
+
+
+
+.table-container {
+    display: flex;
+    justify-content: center;
+}
+
+.t-header {
+    padding: 1rem;
+    color: #fcfcfc;
+    margin: 0%;
+    border-bottom: 1px solid #fcfcfc;
+}
+
+.td-data{
+    text-align: center;
+    padding: 1rem;
+    color: #b3b2b2;
+}
+
+.marcar {
+    text-decoration: line-through;
+}
+
+.t-buttom {
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.t-buttom:hover {
+    opacity: 0.9;
+    cursor: grab;
+}
+
+.reservas-row:hover {
+    opacity: 0.7;
+}
+
+
+.loader {
+    border: .3rem solid #f3f3f3; /* Light grey */
+    border-top: .3rem solid #db3434; /* Blue */
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    animation: spin 2s linear infinite;
+}
+
+.eliminar {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    color: #b3b2b2;
+}
+
+.cancelar{
+    background-color: #cb4c4c;
+    width: 6rem;
+    height: 3rem;
+    border: none;
+    border-radius: 5px;
+}
+.cancelar:hover {
+    opacity: 0.7;
+}
+
+.volver {
+    padding: 1rem;
+    background-color: #cb4c4c;
+}
+
+.cancelar-input {
+    padding: 1rem;
+}
+
+#id-btn {
+    padding: 0.4rem;
+    margin-left: 1rem;
+}
+
+#id-btn:hover{
+    color: #f3f3f3;
+    background-color: #db3434;
+    border-color: #db3434;;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+@media screen and (max-width: 650px) {
+    
+    .acciones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+}
+
