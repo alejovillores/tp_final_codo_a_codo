@@ -14,8 +14,7 @@ Este se desarrollará para el back-end en Java utilizando como framework web Spr
 Para el front-end se utilizará Html,css y Javascript (Vue.js como framework front-end)
 
 #### Introducción
-El trabajo es una simulacion de un restaurante, los clientes llaman y realizan una reserva disponible,
-hay un cupo limitado de reservas.\
+El trabajo es una simulacion de un restaurante, realizan una reserva, pueden editar y cancelar reservas
 El restaurante, ademas acepta reservas hasta las 22:00hrs y comienza  a tomar reservas a partir de las 19:00hrs.
 
 A partir de las 22:00hrs, los turnos son por orden de llegada.
