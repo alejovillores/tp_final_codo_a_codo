@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fonts from Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>La Parolaccia</title>
+</head>
+<body>
+
+    <nav class="nav-container">
+        <img src="imgs/logo-principal.png">
+    </nav>
+
+    <div id="app" class="eliminar">
+        <label for="eliminar">Ingrese el id de la reserva</label>
+        <input v-model.number="id" class="cancelar-input" type="number"  required>
+        
+        <label for="eliminar">Ingrese el email de la reserva</label>
+        <input v-model.number="email" class="cancelar-input" type="text" required>
+        <div class="botonera-cancelar">
+            <button class="cancelar" v-on:click="cancelarReserva()"> Cancelar Reserva</button>
+        </div>
+        <div v-if="mostrar" class="loader"></div>
+
+        <span v-if="respuesta" style="color: rgb(245, 245, 245);">{{ respuesta }}</span>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/cancelar.js"></script>
+</body>
+</html>

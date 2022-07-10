@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fonts from Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>La Parolaccia</title>
+</head>
+<body>
+    <nav id="nav" class="nav-container">
+        <img src="imgs/logo-principal.png">
+    </nav>
+
+    <div id="main-form" class="main-form">
+        <div id="app-form" class="form">
+            <div class="nombres">
+                <div class="input-field">
+                    <label class="label">Nombre:</label>
+                    <input id="nombre" class="input-form" type="text" placeholder="John" required>
+                </div>
+                <div class="input-field">
+                    <label class="label">Apellido:</label>
+                    <input id="apellido" class="input-form" type="text" placeholder="Doe" required>
+                </div>
+            </div>
+            <div class="input-field">
+                <label class="label">Email: </label>
+                <input id="email" class="input-form" type="email" placeholder="@example.com" required>
+            </div>
+            <div id="fecha" class="input-field">
+                <span>Dia: {{fecha.dia}} / {{fecha.mes}} /{{fecha.anio}}</span>
+                <div class="horario">
+                    <label class="label">Hora:</label>
+                    <select name="opciones" id="opciones">
+                        <option class="op" v-for="opcion in opciones" :value="opcion.value">
+                            {{ opcion.hora }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-field">
+                <label class="label">Cantidad: </label>
+                <input id="cantidad" class="input-form" type="number" min="1" value="1" required>
+            </div>
+            <div class="input-field">
+                <label for="send">Quiero recibir mail de confirmacion</label>
+                <input type="checkbox" name="send" id="send" value="1">
+            </div>
+
+            <button id="reservar-btn" v-on:click="realizarReserva()"> Reservar</button>
+            <span style="color: rgb(60, 156, 60) ;" v-if="ok"> Reserva realizada con exito</span>
+            <span style="color: rgb(179,29,45);" v-if="error"> Ya se realizo una reserva con los mismos datos! </span>
+        </div>
+        <footer class="footer">
+            <p>Diseñada por Alejo Villores con fines educativos.</p>
+            <p> 2022 Codo a Codo 4.0</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html> 

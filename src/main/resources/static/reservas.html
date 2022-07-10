@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="css/style.css">
+    <title>La Parolaccia - Reservas</title>
+</head>
+<body>
+    <nav id="nav" class="nav-container">
+        <img src="imgs/logo-principal.png">
+    </nav>
+    <div id="reservas-table" class="table-container">
+        <table>
+            <tr id="header-row">
+                <th class="t-header"> Id </th>
+                <th class="t-header"> Nombre </th>
+                <th class="t-header"> Apellido </th>
+                <th class="t-header"> Email </th>
+                <th class="t-header"> Horario </th>
+                <th class="t-header"> Asistencia </th>
+            </tr>
+            <tr  class="reservas-row " v-for="row in reservas" v-bind:id="row.id">
+                    <td class="td-data"  :class="{'marcar': checks[row.id]} "> {{ row.id }} </td>
+                    <td class="td-data"  :class="{'marcar': checks[row.id]} "> {{ row.nombre }}</td>
+                    <td class="td-data"  :class="{'marcar': checks[row.id]} "> {{ row.apellido }}</td>
+                    <td class="td-data"  :class="{'marcar': checks[row.id]} "> {{ row.email }}</td>
+                    <td class="td-data"  :class="{'marcar': checks[row.id]} "> {{ row.timestamp }}</td>
+                    <td class="td-data"> <input type="checkbox" v-model="checks[row.id]" name="asistencia"></td>
+            </tr>
+            <tr>
+                    <td> <button v-on:click="actualizar()" class="t-buttom" style="background-color: rgb(60, 156, 60); border: none;"> Actualizar</button> </th>
+                    <td></td>
+                    <td> <button style="background-color: rgb(203, 71, 71);border: none;" v-on:click="limpiar()"class="t-buttom"> Limpiar</button> </th>
+                    <td></td>
+                    <td></td>
+                    <td> <button style="background-color: rgb(111, 109, 220);border: none;" v-on:click="print()" class="t-buttom"> Imprimir</button> </th>
+            </tr>
+
+        </table>
+    </div>
+    <footer class="footer">
+        <p>Diseñada por Alejo Villores con fines educativos.</p>
+        <p> 2022 Codo a Codo 4.0</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/reservas.js"></script>
+</body>
+</html>
